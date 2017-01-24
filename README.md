@@ -1,2 +1,19 @@
-# KB
-Knowledge Base based on Laravel
+# Knowledge Base
+
+*development in progress...*
+
+# Requirements
+
+*TODO*
+
+# Installation
+
+*TODO*
+
+# Contributing
+
+*TODO*
+
+# Licence
+
+*TODO*

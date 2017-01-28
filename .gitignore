@@ -3,6 +3,11 @@
 /storage/*.key
 /vendor
 /.idea
+/.sass-cache
 Homestead.json
 Homestead.yaml
 .env
+/config/adldap.php
+/config/adldap_auth.php
+
+composer\.lock

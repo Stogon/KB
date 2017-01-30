@@ -2,7 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+use App\UserState;
+
+class StatesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(RolesSeeder::class);
-        $this->call(StatesSeeder::class);
+        UserState::create(['name' => 'enabled']);
+        UserState::create(['name' => 'disabled']);
     }
 }

@@ -21,6 +21,8 @@ class CreateArticlesFilesTable extends Migration
             $table->boolean('locked')->default(false);
             $table->integer('article_id')->unsigned():
             $table->integer('author_id')->unsigned();
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at');
         });
     }
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArticlesDraftsTable extends Migration
+class CreateArticlesSettingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateArticlesDraftsTable extends Migration
      */
     public function up()
     {
-        Schema::create('articles_drafts', function(Blueprint $table) {
+        Schema::create('articles_settings', function(Blueprint $table) {
             $table->increments('id');
-            $table->json('payload');
-            $table->integer('author_id')->unsigned();
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at');
+            $table->enum('visibility', ['public', 'private'])->default('private');
+            $table->boolean('allow_comments')->default(true);
         });
     }
 
@@ -29,6 +27,6 @@ class CreateArticlesDraftsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('articles_drafts');
+        Schema::drop('articles_settings');
     }
 }

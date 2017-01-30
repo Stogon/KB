@@ -27,10 +27,34 @@ class MakeRelations extends Migration
             $table->foreign('role_id')->references('id')->on('users_roles');
         });
 
+        // Section
+        Schema::table('sections', function(Blueprint $table) {
+            $table->foreign('section_parent_id')->references('id')->on('sections');
+        });
+
         // Articles
         Schema::table('articles', function(Blueprint $table) {
             $table->foreign('section_id')->references('id')->on('sections');
             $table->foreign('settings_id')->references('id')->on('articles_settings');
+            $table->foreign('author_id')->references('id')->on('users');
+        });
+
+        Schema::table('articles_comments', function(Blueprint $table) {
+            $table->foreign('author_id')->references('id')->on('users');
+            $table->foreign('article_id')->references('id')->on('articles');
+        });
+
+        Schema::table('articles_tags_has_articles', function(Blueprint $table) {
+            $table->foreign('articles_tags_id')->references('id')->on('articles_tags');
+            $table->foreign('articles_id')->references('id')->on('articles');
+        });
+
+        Schema::table('articles_files', function(Blueprint $table) {
+            $table->foreign('author_id')->references('id')->on('users');
+            $table->foreign('article_id')->references('id')->on('users');
+        });
+
+        Schema::table('articles_drafts', function(Blueprint $table) {
             $table->foreign('author_id')->references('id')->on('users');
         });
     }

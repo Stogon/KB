@@ -9,7 +9,7 @@ class UserState extends Model
     protected $table = 'users_states';
     public $timestamps = false;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['state'];
 
     /**
      * Relations

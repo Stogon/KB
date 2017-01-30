@@ -16,7 +16,7 @@ class CreateUsersRolesTable extends Migration
         Schema::create('users_roles', function(Blueprint $table) {
             $table->increments('id');
             $table->string('name', 45);
-            $table->string('ldap_group', 100);
+            $table->string('ldap_group', 100)->nullable();
         });
     }
 

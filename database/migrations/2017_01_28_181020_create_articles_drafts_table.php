@@ -15,7 +15,7 @@ class CreateArticlesDraftsTable extends Migration
     {
         Schema::create('articles_drafts', function(Blueprint $table) {
             $table->increments('id');
-            $table->json('payload');
+            $table->longText('payload');
             $table->integer('author_id')->unsigned();
             $table->dateTime('created_at');
             $table->dateTime('updated_at');

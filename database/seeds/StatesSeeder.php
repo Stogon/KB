@@ -13,7 +13,7 @@ class StatesSeeder extends Seeder
      */
     public function run()
     {
-        UserState::create(['name' => 'enabled']);
-        UserState::create(['name' => 'disabled']);
+        UserState::create(['state' => 'enabled']);
+        UserState::create(['state' => 'disabled']);
     }
 }

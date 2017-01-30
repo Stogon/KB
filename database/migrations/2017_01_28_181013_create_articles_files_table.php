@@ -19,7 +19,7 @@ class CreateArticlesFilesTable extends Migration
             $table->text('path');
             $table->string('type', 50);
             $table->boolean('locked')->default(false);
-            $table->integer('article_id')->unsigned():
+            $table->integer('article_id')->unsigned();
             $table->integer('author_id')->unsigned();
             $table->dateTime('created_at');
             $table->dateTime('updated_at');

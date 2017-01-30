@@ -13,6 +13,10 @@ class ArticleFile extends Model
         'filename', 'path', 'type', 'locked', 'article_id', 'author_id'
     ];
 
+    protected $casts = [
+        'locked' => 'boolean'    
+    ];
+
     /**
      * Relations
      */

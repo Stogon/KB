@@ -11,6 +11,10 @@ class ArticleSettings extends Model
 
     protected $fillable = ['visibility', 'allow_comments'];
 
+    protected $casts = [
+        'allow_comments' => 'boolean'
+    ];
+
     /**
      * Relations
      */

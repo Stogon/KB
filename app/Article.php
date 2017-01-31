@@ -48,9 +48,9 @@ class Article extends Model
      * Get the article's comments
      * @return hasMany
      */
-    public function comments()
+    public function votes()
     {
-        return $this->hasMany('App\ArticleComment', 'article_id');
+        return $this->hasMany('App\ArticleVote', 'article_id');
     }
 
     /**

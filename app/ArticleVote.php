@@ -4,13 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ArticleComment extends Model
+class ArticleVote extends Model
 {
-    protected $table = 'articles_comments';
+    protected $table = 'articles_votes';
     public $timestamps = true;
 
     protected $fillable = [
-        'content', 'author_id', 'article_id'
+        'vote', 'author_id', 'article_id'
     ];
 
     /**
@@ -18,7 +18,7 @@ class ArticleComment extends Model
      */
 
     /**
-     * Get the comment's author
+     * Get the vote's author
      * @return belongsTo
      */
     public function author()

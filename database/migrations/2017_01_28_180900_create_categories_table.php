@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSectionsTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateSectionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sections', function(Blueprint $table) {
+        Schema::create('categories', function(Blueprint $table) {
             $table->increments('id');
             $table->string('name', 100);
             $table->string('slug');
             $table->text('description')->nullable();
-            $table->integer('section_parent_id')->unsigned()->nullable();
-            $table->integer('category_id')->unsigned()->nullable();
         });
     }
 
@@ -30,6 +28,6 @@ class CreateSectionsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('sections');
+        Schema::drop('categories');
     }
 }

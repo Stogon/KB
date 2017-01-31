@@ -74,8 +74,8 @@ class User extends Authenticatable
      * Get the user's comments
      * @return hasMany
      */
-    public function articles_comments()
+    public function articles_votes()
     {
-        return $this->hasMany('App\ArticleComment', 'author_id');
+        return $this->hasMany('App\ArticleVote', 'author_id');
     }
 }

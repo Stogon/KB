@@ -9,11 +9,20 @@ class Section extends Model
     protected $table = 'sections';
     public $timestamps = false;
 
-    protected $fillable = ['name', 'slug', 'description', 'section_parent_id'];
+    protected $fillable = ['name', 'slug', 'description', 'section_parent_id', 'category_id'];
 
     /**
      * Relations
      */
+
+    /**
+     * Get the main category
+     * @return belongsTo
+     */
+    public function category()
+    {
+        return $this->belongsTo('App\Category', 'category_id');
+    }
 
     /**
      * Get the parent section (if exists)

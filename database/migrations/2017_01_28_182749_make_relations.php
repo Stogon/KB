@@ -27,19 +27,19 @@ class MakeRelations extends Migration
             $table->foreign('role_id')->references('id')->on('users_roles');
         });
 
-        // Section
+        // Category & Section
         Schema::table('sections', function(Blueprint $table) {
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->foreign('section_parent_id')->references('id')->on('sections');
         });
 
         // Articles
         Schema::table('articles', function(Blueprint $table) {
             $table->foreign('section_id')->references('id')->on('sections');
-            $table->foreign('settings_id')->references('id')->on('articles_settings');
             $table->foreign('author_id')->references('id')->on('users');
         });
 
-        Schema::table('articles_comments', function(Blueprint $table) {
+        Schema::table('articles_votes', function(Blueprint $table) {
             $table->foreign('author_id')->references('id')->on('users');
             $table->foreign('article_id')->references('id')->on('articles');
         });

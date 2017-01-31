@@ -1,6 +1,7 @@
 
 // Body
 $body-bg: #f5f8fa;
+$main-color: #ffc107;
 
 // Borders
 $laravel-border-color: darken($body-bg, 10%);
@@ -17,13 +18,14 @@ $brand-warning: #cbb956;
 $brand-danger: #bf5329;
 
 // Typography
-$font-family-sans-serif: "Raleway", sans-serif;
+$font-family-sans-serif: "Source Sans Pro;", sans-serif;
 $font-size-base: 14px;
 $line-height-base: 1.6;
-$text-color: #636b6f;
+$text-color: #515455;
 
 // Navbar
 $navbar-default-bg: #fff;
+$navbar-menu-width: 250px !default;
 
 // Buttons
 $btn-default-color: $text-color;

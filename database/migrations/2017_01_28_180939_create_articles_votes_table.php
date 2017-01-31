@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArticlesCommentsTable extends Migration
+class CreateArticlesVotesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateArticlesCommentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('articles_comments', function(Blueprint $table) {
+        Schema::create('articles_votes', function(Blueprint $table) {
             $table->increments('id');
-            $table->mediumText('content');
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at');
+            $table->tinyInteger('vote')->default(0);
             $table->integer('article_id')->unsigned();
             $table->integer('author_id')->unsigned();
         });
@@ -30,6 +28,6 @@ class CreateArticlesCommentsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('articles_comments');
+        Schema::drop('articles_votes');
     }
 }

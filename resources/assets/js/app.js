@@ -13,8 +13,25 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+// Vue.component('example', require('./components/Example.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#navigation',
+
+    methods: {
+        showNav: function(){
+            let body = document.querySelector('body');
+            body.classList.add('with--sidebar');
+        }
+    }
 });
+
+const nav_cache = new Vue({
+    el: '.site-cache',
+    methods: {
+        hideNav: function(){
+            let body = document.querySelector('body');
+            body.classList.remove('with--sidebar');
+        }
+    }
+})

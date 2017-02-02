@@ -27,3 +27,90 @@ body {
 a, a:visited {
     color: $main-color;
 }
+
+.site-container, .site-pusher, .site-content {
+    height: 100%;
+}
+
+#content {
+    height: 100%;
+}
+
+/**
+ * Navigation
+ */
+
+#navigation {
+    background: $main-color;
+    color: $text-bright-color;
+    height: $navbar-height;
+    width: 100%;
+    line-height: $navbar-height;
+    a {
+        color: $text-bright-color;
+        text-decoration: none
+    }
+    .nav-logo {
+        float: left;
+        font-weight: bold;
+        padding: 0 27px;
+    }
+    .nav-menu {
+        float: left;
+        a {
+            margin: 0;
+            padding: 0 14px;
+            display: inline-block;
+            &:hover {
+                background: lighten($main-color, 12%);
+            }
+        }
+    }
+}
+
+/**
+ * Header
+ */
+
+#header {
+    background-color: lighten($main-color, 30%);
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    height: $header-height;
+    color: $header-font-color;
+    position: relative;
+    &:before {
+        content: ' ';
+        display: block;
+        background: rgba(white, 0.25);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+    .header-container {
+        position: relative;
+        z-index: 3;
+        .header-title {
+            font-size: 4em;
+        }
+    }
+    .container, .row {
+        height: 100%;
+    }
+}
+
+/**
+ * Footer
+ */
+
+#footer {
+    background: $main-color;
+    color: $text-bright-color;
+    a {
+        color: $text-bright-color;
+    }
+}

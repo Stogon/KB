@@ -22,10 +22,16 @@ $font-family-sans-serif: "Source Sans Pro;", sans-serif;
 $font-size-base: 14px;
 $line-height-base: 1.6;
 $text-color: #515455;
+$text-bright-color: #fff;
 
 // Navbar
-$navbar-default-bg: #fff;
+$navbar-default-bg: $main-color;
 $navbar-menu-width: 250px !default;
+$navbar-height: 70px;
+
+// Header
+$header-height: 250px;
+$header-font-color: $text-bright-color;
 
 // Buttons
 $btn-default-color: $text-color;

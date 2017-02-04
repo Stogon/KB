@@ -9,7 +9,7 @@ class Category extends Model
     protected $table = 'categories';
     public $timestamps = false;
 
-    protected $fillable = ['name', 'slug', 'description'];
+    protected $fillable = ['name', 'slug', 'description', 'icon'];
 
     /**
      * Relations

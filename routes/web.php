@@ -16,6 +16,7 @@ Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 Route::group(['prefix' => 'users'], function() {
     Route::get('login', ['as' => 'login', 'uses' => 'AuthController@login']);
     Route::get('signup', ['as' => 'signup', 'uses' => 'AuthController@signup']);
+    Route::post('authenticate', 'AuthController@authenticate');
 });
 
 Route::group(['prefix' => '{category}'], function() {

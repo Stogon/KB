@@ -1,6 +1,6 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700');
 
 // Variables
 @import "variables";
@@ -133,14 +133,121 @@ a, a:visited {
             text-transform: uppercase;
             line-height: 30px;
             width: 100%;
+            border-radius: 0 0 3px 3px;
         }
         &:hover {
-            background-color: mix($bg-color, black, 7%);
+            background-color: mix($body-bg, black, 98%);
             aside {
-                background-color: mix($main-color, black, 7%);
+                background-color: mix($main-color, black, 92%);
             }
         }
     }
+}
+
+/**
+ * Components
+ */
+
+.window-container {
+    background: mix($body-bg, black, 98%);
+    border: 1px solid $input-border;
+    padding: 20px;
+    width: $window-width;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px $shadow;
+    .window-title {
+        font-weight: 200;
+        font-size: 2em;
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+.form {
+    .form-control {
+        width: 100%;
+    }
+    .form-label {
+        display: block;
+    }
+}
+
+.form-control {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 2px solid $input-border;
+    border-radius: 3px;
+    text-align: left;
+    transition: border-color 250ms ease;
+    &:hover {
+        border-color: mix($main-color, $input-border, 60%);
+        transition: border-color 150ms ease;
+    }
+    &:focus {
+        border-color: $main-color;
+        transition: border-color 150ms ease;
+    }
+}
+
+.form-label {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.btn {
+    background: transparent;
+    color: $btn-background-color;
+    border: 2px solid $btn-background-color;
+    padding: 8px 12px;
+    border-radius: 2px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    &:hover {
+        background: $btn-background-color;
+        color: $text-bright-color;
+    }
+    &:active {
+        background: mix($btn-background-color, black, 95%);
+        border-color: mix($btn-background-color, black, 95%);
+        color: $text-bright-color;
+    }
+}
+
+/**
+ * Alerts
+ */
+
+.alert {
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d0e9c6;
+    color: #3c763d;
+}
+
+.alert-danger {
+    background-color: #f2dede;
+    border-color: #ebcccc;
+    color: #a94442;
+}
+
+.alert-info {
+    background-color: #d9edf7;
+    border-color: #bcdff1;
+    color: #31708f;
+}
+
+.alert-warning {
+    background-color: #fcf8e3;
+    border-color: #faf2cc;
+    color: #8a6d3b;
 }
 
 /**

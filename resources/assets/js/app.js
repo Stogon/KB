@@ -16,22 +16,16 @@ require('./bootstrap');
 // Vue.component('example', require('./components/Example.vue'));
 
 const app = new Vue({
-    el: '#navigation',
-
-    methods: {
-        showNav: function(){
-            let body = document.querySelector('body');
-            body.classList.add('with--sidebar');
-        }
-    }
+    el: '#app',
 });
 
-const nav_cache = new Vue({
-    el: '.site-cache',
-    methods: {
-        hideNav: function(){
-            let body = document.querySelector('body');
-            body.classList.remove('with--sidebar');
-        }
-    }
-})
+let navbar_icon = document.querySelector('.navbar-icon');
+let site_cache = document.querySelector('.site-cache');
+navbar_icon.addEventListener('click', function(e) {
+    let body = document.querySelector('body');
+    body.classList.add('with--sidebar');
+});
+site_cache.addEventListener('click', function(e) {
+    let body = document.querySelector('body');
+    body.classList.remove('with--sidebar');
+});

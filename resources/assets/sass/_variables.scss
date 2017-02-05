@@ -35,7 +35,7 @@ $header-height: 250px;
 $header-font-color: $text-bright-color;
 
 // Buttons
-$btn-default-color: $text-color;
+$btn-background-color: $main-color;
 
 // Inputs
 $input-border: lighten($text-color, 40%);
@@ -44,3 +44,4 @@ $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
 $panel-default-heading-bg: #fff;
+$window-width: 450px;

@@ -6,11 +6,11 @@
             <a href="{{ route('home') }}">Home</a>
             @if(Auth::check())
                 <a href="#">Articles</a>
-                <a href="#">Admin</a>
-                <a href="#">Logout</a>
+                <a href="{{ route('admin.index') }}">Admin</a>
+                <a href="{{ route('users.logout') }}">Logout</a>
             @else
-                <a href="{{ route('login') }}">Login</a>
-                <a href="{{ route('signup') }}">Signup</a>
+                <a href="{{ route('users.login') }}">Login</a>
+                <a href="{{ route('users.signup') }}">Signup</a>
             @endif
         </nav>
     </div>

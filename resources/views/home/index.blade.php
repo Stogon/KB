@@ -18,4 +18,11 @@
         @endforeach
     </div>
 </section>
+<hr>
+<h2>Latest articles</h2>
+<section class="latest-articles">
+    <div>
+        TODO
+    </div>
+</section>
 @endsection
